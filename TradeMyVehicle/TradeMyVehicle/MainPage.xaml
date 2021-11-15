@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="TradeMyVehicle.MainPage">
+
+    <StackLayout>
+        <Label Text="Welcome to TradeMyVehicle"
+               FontSize="Title"/>
+        <StackLayout Margin="20, 50, 20, 0" Spacing="10">
+            <Entry 
+                x:Name="UserName"
+                Placeholder="Username" 
+                BackgroundColor="WhiteSmoke" />
+            <!--<Entry Placeholder="Password" IsPassword="True" />-->
+            <Label x:Name="name" />
+            <Button 
+                x:Name="SaveBtn"
+                Text="Save"
+                Clicked="SaveBtn_Clicked" />
+            <Button
+                x:Name="GetBtn"
+                Text="Get Name"
+                Clicked="GetBtn_Clicked" />
+        </StackLayout>
+        <!--<ffimageloading:CachedImage--> 
+            <!--HeightRequest="100"
+            WidthRequest="100"
+            CacheType="All"
+            Source="https://cdp.azureedge.net/products-private/prod/9b45ffc5-989f-4ce2-9033-5383178b5279/6dac21e1-4f17-407e-8a45-a60101214792/00000000-0000-0000-0000-000000000000/c55e96e4-d8a5-4675-ac3a-ac460039f1b4/6d41d3b2-ae90-4d39-b0ae-ac6f010eca46/6000000001.jpeg">
+            <ffimageloading:CachedImage.Transformations>
+                <transformations:CircleTransformation />
+            </ffimageloading:CachedImage.Transformations>
+        </ffimageloading:CachedImage>-->
+        
+    </StackLayout>
+
+</ContentPage>
