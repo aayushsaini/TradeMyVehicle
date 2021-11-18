@@ -1,5 +1,6 @@
 ﻿using System;
 using TradeMyVehicle.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,15 @@ namespace TradeMyVehicle
         public App()
         {
             InitializeComponent();
-
-            MainPage = new SignupPage();
+            var accessToken = Preferences.Get("AccessToken", string.Empty);
+            if (string.IsNullOrEmpty(accessToken))
+            {
+                MainPage = new NavigationPage(new SignupPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new HomePage());
+            }
         }
 
         protected override void OnStart()

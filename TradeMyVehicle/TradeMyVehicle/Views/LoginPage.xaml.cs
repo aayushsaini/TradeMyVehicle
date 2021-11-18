@@ -33,7 +33,9 @@ namespace TradeMyVehicle.Views
             var response = await ApiService.Login(EntEmail.Text, EntPassword.Text);
             if (response)
             {
-                await DisplayAlert("Success", "You've successfully logged in", "Proceed");
+                //await DisplayAlert("Success", "You've successfully logged in", "Proceed");
+                //Sets a new Homepage to avoid back navigation
+                Application.Current.MainPage = new NavigationPage(new HomePage()); 
             }
             else
             {
