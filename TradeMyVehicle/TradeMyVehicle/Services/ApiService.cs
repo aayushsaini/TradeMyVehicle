@@ -31,7 +31,7 @@ namespace TradeMyVehicle.Services
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             
             //Check Post request response from server
-            var response = await httpClient.PostAsync("http://trademycar.azurewebsites.net/api/accounts/register", content);
+            var response = await httpClient.PostAsync("https://trademycar.azurewebsites.net/api/accounts/register", content);
             if (!response.IsSuccessStatusCode) return false;
             return true;
         }
@@ -52,7 +52,7 @@ namespace TradeMyVehicle.Services
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
             //Check Post request response from server
-            var response = await httpClient.PostAsync("http://trademycar.azurewebsites.net/api/accounts/login", content);
+            var response = await httpClient.PostAsync("https://trademycar.azurewebsites.net/api/accounts/login", content);
             if (!response.IsSuccessStatusCode) return false;
 
             //Deserializing the response object into the Token Model form

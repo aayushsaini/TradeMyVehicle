@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TradeMyVehicle.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="15"
+                     Margin="25">
+            <Label TextColor="#303F9F"
+                   Text="SIGN IN"
+                   FontSize="38"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   Margin="0, 95, 0, 70" />
+            <Entry Placeholder="Email"
+                   PlaceholderColor="#666AD1"
+                   TextColor="#303F9F"
+                   x:Name="EntEmail"
+                   Keyboard="Email" />
+            <Entry Placeholder="Password"
+                   PlaceholderColor="#666AD1"
+                   TextColor="#303F9F"
+                   IsPassword="True"
+                   x:Name="EntPassword"
+                   Keyboard="Default" />
+            <ActivityIndicator IsVisible="false" 
+                               Color="#303F9F" 
+                               x:Name="Loader" 
+                               Margin="22,22" />
+            <Button Text="Sign into my account"
+                    BackgroundColor="#303F9F"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Margin="0, 25, 0, 0"
+                    x:Name="BtnLogin"
+                    Clicked="BtnLogin_Clicked"/>
+            <Label Text="Don't have an account? Go back to create one"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="EndAndExpand"
+                   TextColor="#666AD1" />
+            <Button Text="Go Back"
+                    BackgroundColor="#858AE3"
+                    TextColor="White"
+                    CornerRadius="8"
+                    x:Name="BtnSignup"
+                    Margin="50,0,50,0"    
+                    Clicked="BtnSignup_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
