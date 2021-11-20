@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TradeMyVehicle.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MyAds : ContentPage
+    public partial class MyAdsPage : ContentPage
     {
-        public MyAds()
+        public MyAdsPage()
         {
             InitializeComponent();
         }

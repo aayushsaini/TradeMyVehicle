@@ -11,7 +11,7 @@
 
     <pages:ExplorePage Title="Explore" IconImageSource="explore.png" />
     <pages:SellPage Title="Sell" IconImageSource="sell.png" />
-    <pages:MyAds Title="My Ads" IconImageSource="ads.png" />
-    <pages:MyAccount Title="Account" IconImageSource="user.png" />
+    <pages:MyAdsPage Title="My Ads" IconImageSource="ads.png" />
+    <pages:MyAccountPage Title="Account" IconImageSource="user.png" />
 
 </TabbedPage>

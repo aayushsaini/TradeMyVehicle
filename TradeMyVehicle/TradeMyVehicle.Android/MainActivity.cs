@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Plugin.CurrentActivity;
 
 namespace TradeMyVehicle.Droid
 {
@@ -12,6 +13,8 @@ namespace TradeMyVehicle.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer:true);
