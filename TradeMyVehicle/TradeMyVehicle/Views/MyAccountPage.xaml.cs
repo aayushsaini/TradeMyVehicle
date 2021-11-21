@@ -74,5 +74,15 @@ namespace TradeMyVehicle.Views
                 ImgProfile.Source = profileImg.FullImagePath;
             }
         }
+
+        private void TapChangePassword_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ChangePasswordPage());
+        }
+
+        private void TapChangePhone_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ChangePhonePage());
+        }
     }
 }

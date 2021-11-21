@@ -45,27 +45,27 @@
                          Grid.Row="1"
                          BackgroundColor="White">
                 <Label Margin="20,0,20,0"
-                       Text="Change Password"
+                       Text="Change Your Password"
                        TextColor="#303F9F"
                        FontSize="Medium">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="TapChangePassword" />
+                        <TapGestureRecognizer x:Name="TapChangePassword" Tapped="TapChangePassword_Tapped" />
                     </Label.GestureRecognizers>
                 </Label>
                 <BoxView HeightRequest="1"
-                         BackgroundColor="#001970" />
+                         BackgroundColor="#dadada" />
                 <Label Margin="20,0,20,0"
-                       Text="Change Phone"
+                       Text="Update Phone Number"
                        TextColor="#303F9F"
                        FontSize="Medium">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer x:Name="TapChangePhone" />
+                        <TapGestureRecognizer x:Name="TapChangePhone" Tapped="TapChangePhone_Tapped" />
                     </Label.GestureRecognizers>
                 </Label>
                 <BoxView HeightRequest="1"
-                         BackgroundColor="#001970" />
+                         BackgroundColor="#dadada" />
                 <Label Margin="20,0,20,0"
-                       Text="Logout"
+                       Text="Logout My Account"
                        TextColor="#303F9F"
                        FontSize="Medium">
                     <Label.GestureRecognizers>
@@ -73,7 +73,8 @@
                     </Label.GestureRecognizers>
                 </Label>
                 <BoxView HeightRequest="1"
-                         BackgroundColor="#001970" />
+                         BackgroundColor="#dadada" />
+                
             </StackLayout>
         </Grid>
     </ContentPage.Content>

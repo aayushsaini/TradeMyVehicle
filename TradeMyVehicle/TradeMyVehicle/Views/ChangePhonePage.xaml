@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TradeMyVehicle.Views.ChangePhonePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="20, 0" Spacing="15">
+            <Label FontSize="28"
+                   TextColor="#303F9F"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text="Update Phone Number"
+                   Margin="0, 200,0,110"/>
+            <Entry Placeholder="Type Your Phone Number Here..."
+                   Keyboard="Telephone"
+                   Margin="20"
+                   MaxLength="10"
+                   PlaceholderColor="#303F9F"
+                   TextColor="#666AD1"
+                   x:Name="EntPhone" />
+            <ActivityIndicator IsVisible="false" 
+                               Color="#303F9F" 
+                               x:Name="Loader"
+                               Margin="0, 71" />
+            <Button BackgroundColor="#666AD1"
+                    TextColor="White"
+                    Text="Update Number"
+                    Margin="70,70"
+                    CornerRadius="8"
+                    x:Name="BtnAddPhone"
+                    Clicked="BtnAddPhone_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
