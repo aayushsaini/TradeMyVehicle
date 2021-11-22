@@ -101,7 +101,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\loader.gif" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TradeMyVehicle\TradeMyVehicle.csproj">
       <Project>{F8BA847E-4F02-49FC-90A6-9169CFEEE3DF}</Project>

@@ -5,7 +5,7 @@
             xmlns:androidSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
             xmlns:pages="clr-namespace:TradeMyVehicle.Views"
             androidSpecific:TabbedPage.ToolbarPlacement="Bottom"
-            BarBackgroundColor="WhiteSmoke"
+            BarBackgroundColor="#e9e9e9"
             SelectedTabColor="#666AD1"
             NavigationPage.HasNavigationBar="False">
 

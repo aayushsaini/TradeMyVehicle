@@ -23,6 +23,8 @@ namespace TradeMyVehicle.Models
         public string email { get; set; }
         public string phone { get; set; }
         public string imageUrl { get; set; }
+        public string fullImageUrl => $"http://trademycar.azurewebsites.net/{imageUrl}";
+
     }
 
     public class Image
@@ -31,5 +33,6 @@ namespace TradeMyVehicle.Models
         public string imageUrl { get; set; }
         public int vehicleId { get; set; }
         public object imageArray { get; set; }
+        public string fullImageUrl => $"http://trademycar.azurewebsites.net/{imageUrl}";
     }
 }

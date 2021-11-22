@@ -159,12 +159,12 @@ namespace TradeMyVehicle.Services
             return true;
         }
 
-        public static async Task<List<Category>> GetVehicleDetail(int vehicleId)
+        public static async Task<VehicleDetail> GetVehicleDetail(int vehicleId)
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("AccessToken", ""));
             var response = await httpClient.GetStringAsync($"https://trademycar.azurewebsites.net/api/Vehicles/VehicleDetails?id={vehicleId}");
-            return JsonConvert.DeserializeObject<List<Category>>(response);
+            return JsonConvert.DeserializeObject<VehicleDetail>(response);
         }
 
         public static async Task<List<VehicleByCategory>> GetVehicleByCategory(int categoryId)

@@ -15,5 +15,8 @@ namespace TradeMyVehicle.Models
         public DateTime datePosted { get; set; }
         public bool isFeatured { get; set; }
         public string imageUrl { get; set; }
+        public string isFeaturedAd => isFeatured ? "Featured" : "Free";
+        public string adPostedDate => datePosted.ToString("y");
+        public string fullImageUrl => $"http://trademycar.azurewebsites.net/{imageUrl}";
     }
 }

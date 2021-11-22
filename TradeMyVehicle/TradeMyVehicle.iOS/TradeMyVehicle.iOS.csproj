@@ -307,4 +307,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\userPlaceholder%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loader.gif" />
+  </ItemGroup>
 </Project>

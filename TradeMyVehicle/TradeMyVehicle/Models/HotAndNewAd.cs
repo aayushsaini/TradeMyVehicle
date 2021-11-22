@@ -13,5 +13,6 @@ namespace TradeMyVehicle.Models
         public string company { get; set; }
         public bool isFeatured { get; set; }
         public string imageUrl { get; set; }
+        public string FullImageUrl => $"http://trademycar.azurewebsites.net/{imageUrl}";
     }
 }

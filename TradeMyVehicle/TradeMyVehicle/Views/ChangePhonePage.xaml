@@ -24,7 +24,7 @@
                                Margin="0, 71" />
             <Button BackgroundColor="#666AD1"
                     TextColor="White"
-                    Text="Update Number"
+                    Text="Update Number "
                     Margin="70,70"
                     CornerRadius="8"
                     x:Name="BtnAddPhone"
