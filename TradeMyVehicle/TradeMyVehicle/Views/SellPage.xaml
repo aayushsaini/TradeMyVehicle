@@ -1,12 +1,113 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TradeMyVehicle.Views.SellPage">
+             x:Class="TradeMyVehicle.Views.SellPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label HorizontalTextAlignment="Center"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       Margin="0, 20, 0, 15"
+                       Text="Enter your vehicle's details below" />
+                <BoxView HeightRequest="1"
+                         BackgroundColor="#d8d8d8" />
+                <StackLayout Margin="20" Spacing="5">
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Condition" />
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Frame HasShadow="False"
+                               CornerRadius="0"
+                               BorderColor="#303F9F"
+                               Padding="50,10,50,10"
+                               Margin="10"
+                               x:Name="FrameUsed">
+                            <Label Text="Used"
+                                   TextColor="Black"
+                                   x:Name="LblUsed" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="TapUsed" Tapped="TapUsed_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <Frame HasShadow="False"
+                               CornerRadius="0"
+                               BorderColor="#303F9F"
+                               Padding="50,10,50,10"
+                               Margin="10"
+                               x:Name="FrameNew">
+                            <Label Text="New"
+                                   TextColor="Black"
+                                   x:Name="LblNew" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="TapNew" Tapped="TapNew_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </StackLayout>
+
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Title*" />
+                    <Entry x:Name="EntTitle" Margin="0,0,0,10" Placeholder="Vehicle's Name" />
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Price*" />
+                    <Entry x:Name="EntPrice" Margin="0,0,0,10" Placeholder="Vehicle's Price" />
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Categories*" />
+                    <Picker Title="Choose Category"
+                            x:Name="PickerCategory"
+                            ItemDisplayBinding="{Binding type}"
+                            SelectedIndexChanged="PickerCategory_SelectedIndexChanged"/>
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Engine*" />
+                    <Entry x:Name="EntEngine" Margin="0,0,0,10" Placeholder="Engines's Capacity" />
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Model No*" />
+                    <Entry x:Name="EntModel" Margin="0,0,0,10" Placeholder="Vehicle's Model" />
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Color*" />
+                    <Entry x:Name="EntColor" Margin="0,0,0,10" Placeholder="Vehicle's Color" />
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Company*" />
+                    <Entry x:Name="EntCompany" Margin="0,0,0,10" Placeholder="Company's Name" />
+
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Location Area*" />
+                    <Entry x:Name="EntLocation" Margin="0,0,0,10" Placeholder="Your location" />
+                    <Label HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           Text="Description*" />
+                    <Editor HeightRequest="100"
+                            AutoSize="Disabled"
+                            Placeholder="Type the description of your vehicle"
+                            x:Name="EdiDescription" />
+                </StackLayout>
+                <Button Text="Post Add"
+                        TextColor="White"
+                        BackgroundColor="#303F9F"
+                        x:Name="BtnSell"
+                        Clicked="BtnSell_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

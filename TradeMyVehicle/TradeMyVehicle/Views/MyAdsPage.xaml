@@ -1,12 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TradeMyVehicle.Views.MyAdsPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="TradeMyVehicle.Views.MyAdsPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid BackgroundColor="White">
+            <ListView x:Name="ListView_Vehicles"
+                      ItemSelected="ListView_Vehicles_ItemSelected"
+                      HasUnevenRows="True"
+                      SeparatorColor="#707070"
+                      Footer=""
+                      CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="ViewCell_Tapped_1">
+                            <Grid Padding="15"
+                                  Margin="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="7*" />
+                                </Grid.ColumnDefinitions>
+                                <forms:CachedImage Source="{Binding fullImageUrl}"
+                                                   Grid.Row="0"
+                                                   Grid.Column="0"
+                                                   Grid.RowSpan="4"
+                                                   HeightRequest="100"
+                                                   Aspect="AspectFill"
+                                                   LoadingPlaceholder="placeholder.png" />
+
+                                <StackLayout Orientation="Horizontal"
+                                             Grid.Row="0"
+                                             Grid.Column="1">
+                                    <Frame BackgroundColor="#001970"
+                                           Padding="10,0,10,0">
+                                        <Label TextColor="White"
+                                               Text="{Binding isFeaturedAd}" />
+                                    </Frame>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="1"
+                                             Grid.Column="1"
+                                             Orientation="Horizontal">
+                                    <Label Text="{Binding price, StringFormat='₹{0}'}"
+                                           TextColor="#303F9F" />
+                                    <Label Text="{Binding adPostedDate}"
+                                           TextColor="#303F9F"
+                                           HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
+
+                                <Label Text="{Binding title}"
+                                       TextColor="#303F9F"
+                                       Grid.Row="2"
+                                       Grid.Column="1" />
+                                <StackLayout Orientation="Horizontal"
+                                             Grid.Row="3"
+                                             Grid.Column="1">
+                                    <Image Source="locationIcon.png" />
+                                    <Label Text="{Binding location}"
+                                           LineBreakMode="TailTruncation"
+                                           VerticalTextAlignment="Center"
+                                           TextColor="#303F9F" />
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

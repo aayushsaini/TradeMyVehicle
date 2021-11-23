@@ -20,7 +20,7 @@ namespace TradeMyVehicle
             {
                 MainPage = new NavigationPage(new HomePage());
             }
-            //MainPage = new MyAccountPage();
+            //MainPage = new SellPage();
         }
 
         protected override void OnStart()

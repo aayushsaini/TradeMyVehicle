@@ -61,6 +61,9 @@ namespace TradeMyVehicle.Services
 
             //Storing user login Access Token in App's isolated storage using preferences
             Preferences.Set("AccessToken", result.access_token);
+            Preferences.Set("UserId", result.user_id);
+            Preferences.Set("TokenExpirationTime", result.expiration_time);
+
             return true;
         }
 

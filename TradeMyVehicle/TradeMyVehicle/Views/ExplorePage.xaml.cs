@@ -54,5 +54,10 @@ namespace TradeMyVehicle.Views
         {
             Navigation.PushModalAsync(new ItemsListPage(3));
         }
+
+        private void TapSearch_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new SearchPage());
+        }
     }
 }

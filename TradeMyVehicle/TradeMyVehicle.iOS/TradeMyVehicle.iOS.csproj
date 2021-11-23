@@ -310,4 +310,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\loader.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add_image.png" />
+  </ItemGroup>
 </Project>

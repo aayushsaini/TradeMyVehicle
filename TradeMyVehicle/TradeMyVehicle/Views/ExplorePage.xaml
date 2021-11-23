@@ -19,7 +19,7 @@
                            Text="Search Vehicle" />
                 </StackLayout>
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer x:Name="TapSearch" />
+                    <TapGestureRecognizer x:Name="TapSearch" Tapped="TapSearch_Tapped" />
                 </Frame.GestureRecognizers>
             </Frame>
             <CollectionView x:Name="CollectionView_Vehicles"

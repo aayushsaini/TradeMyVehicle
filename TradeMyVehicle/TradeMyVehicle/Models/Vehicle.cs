@@ -16,8 +16,8 @@ namespace TradeMyVehicle.Models
         public DateTime datePosted { get; set; }
         public string condition { get; set; }
         public string location { get; set; }
-        public string userid { get; set; }
-        public string categoryid { get; set; }
+        public int userid { get; set; }
+        public int categoryid { get; set; }
 
     }
 }

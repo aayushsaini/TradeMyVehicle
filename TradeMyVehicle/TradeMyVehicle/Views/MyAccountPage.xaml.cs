@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ImageToArray;
 using Plugin.Media.Abstractions;
+using Xamarin.Essentials;
 
 namespace TradeMyVehicle.Views
 {
@@ -83,6 +84,12 @@ namespace TradeMyVehicle.Views
         private void TapChangePhone_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ChangePhonePage());
+        }
+
+        private void TapLogout_Tapped(object sender, EventArgs e)
+        {
+            Preferences.Set("AccessToken", String.Empty);
+            Application.Current.MainPage = new NavigationPage(new SignupPage());
         }
     }
 }
